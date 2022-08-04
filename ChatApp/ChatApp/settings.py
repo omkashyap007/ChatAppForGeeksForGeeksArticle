@@ -6,7 +6,7 @@ SECRET_KEY = 'django-insecure-j&j2$ky(ed@90a+f_4w&n*9ec8blo3j^8f9=kl*4q7_6&6@g5*
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1" ,"192.168.43.28" , "localhost"]
 
 INSTALLED_APPS = [
     'chat.apps.ChatConfig',
@@ -97,3 +97,5 @@ CHANNEL_LAYERS = {
         "BACKEND": "channels.layers.InMemoryChannelLayer"
     }
 }
+
+LOGIN_REDIRECT_URL = "chat-page"
