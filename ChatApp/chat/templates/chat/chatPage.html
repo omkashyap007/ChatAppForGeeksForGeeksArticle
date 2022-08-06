@@ -2,6 +2,10 @@
 <html>
   <body>
     <center><h1>Hello , Welcome to my chat site ! {{request.user}}</h1></center>
+    <br>
+    {% if request.user.is_authenticated  %}
+    <center> Logout the chat Page <a href = "{% url 'logout-user' %}">Logout</a></center>
+    {% endif %}
     <div
       class="chat__item__container"
       id="id_chat_item_container"
